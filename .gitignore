@@ -1,0 +1,8 @@
+env/
+.vscode/
+NJnaiduapp/__pycache__/*
+NJnaiduportal/__pycache__/*
+adminapp/__pycache__/*
+NJnaiduapp/migrations/__pycache__/*
+db.sqlite3
+media/

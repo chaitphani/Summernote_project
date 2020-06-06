@@ -1,0 +1,135 @@
+
+
+{% extends 'User/index.html' %}
+{% block content %}
+
+
+ 
+
+ <style>
+
+
+ </style>
+ 
+<div id="main-wrapper">
+       
+ 
+    <div class="page-wrapper">
+      
+        <div class="row page-titles">
+            <div class="col-md-5 align-self-center">
+                <h3 class="text-themecolor">Ourteam create</h3>
+            </div>
+            <div class="col-md-7 align-self-center">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'dashboard' %}">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'ourteam_create' %}">Ourteam create</a></li>
+                </ol>
+            </div>
+            <div class="">
+                <button class="right-side-toggle waves-effect waves-light btn-inverse btn btn-circle btn-sm pull-right m-l-10"><i class="ti-settings text-white"></i></button>
+            </div>
+        </div>
+        <div class="container-fluid">
+         
+ 
+          
+                    <!-- {{ form.as_p }} -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card card-outline-info">
+                                <div class="card-header">
+                                    <h4 class="m-b-0 text-white">Ourteam Create</h4>
+                                </div>
+                                <div class="card-body">
+                                    <form method="POST">
+                                        {% csrf_token %}
+                                        <div class="form-body">
+                                            <div class="form-group row">
+                                                <label for="id_doctor_image" class="control-label text-right col-md-3">Doctor image:</label>
+                                                <div class="col-md-9">
+                                                <input type="file" name="doctor_image" value="{{book.doctor_image}}" accept="image/*" id="id_doctor_image" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="id_doctor_name" class="control-label text-right col-md-3">Doctor name:</label>
+                                                <div class="col-md-9">
+                                                    <input type="text" name="doctor_name" value="{{book.doctor_name}}" id="id_doctor_name"
+                                                    maxlength="200" class="form-control">
+                                                 
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="id_doctor_designation" class="control-label text-right col-md-3">Doctor designation:</label>
+                                                <div class="col-md-9">
+                                                    <input type="text" name="doctor_designation" value="{{book.doctor_designation}}" id="id_doctor_designation"
+                                                    maxlength="200" class="form-control">
+                                                 
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="id_specialities" class="control-label text-right col-md-3">Specialities:</label>
+                                                <div class="col-md-9">
+                                                    <select name="specialities" class="form-control custom-select" value="{{book.speciality_name}}" id="id_specialities">
+                                                        {% for x in specialities %}
+                                                      
+                                                     
+                                                        <option value="{{x.id}}">{{x.speciality_name}}</option>
+  
+                                                        {% endfor %}
+                                                       
+                                                    </select>
+                                                </div>
+                                            </div>
+                                          
+                                          
+                                            <div class="form-group row ">
+                                                <label 
+                                                    class="control-label text-right col-md-3">Status</label>
+                                                <div class="col-sm-9">
+                                                    <div class="m-b-10">
+                                                        <label class="custom-control custom-checkbox">
+                                                            <input type="checkbox" name="on" class="custom-control-input" {% if book.status %} checked {% else %} unchecked {% endif %}  >
+                                                            <span class="custom-control-label"></span>
+                                                        </label>
+                                                    </div>
+        
+        
+                                                </div>
+        
+                                            </div>
+                                        
+                                        <div class="form-actions">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="row">
+                                                        <div class="offset-sm-3 col-md-9">
+                                                            <!-- <button type="submit" class="btn btn-success"> <i class="fa fa-check"></i> Submit</button>
+                                                            <button type="button" class="btn btn-inverse">Cancel</button> -->
+                                                             <input type="submit" class="btn btn-success" value="Submit" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- <input type="submit" value="Submit" /> -->
+            
+
+        </div>
+
+        
+  
+    </div>
+ 
+</div>
+</div>
+
+    {% endblock %}
+
+

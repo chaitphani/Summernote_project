@@ -1,0 +1,214 @@
+{% load static %}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Start SITE FOOTER
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <footer class="site-footer footer-default-style pd-b-20">
+            <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                Start Footer Widget Area
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+            <div class="footer-widget-area">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <!--~~~~~ Start Widget About Footer ~~~~~--> 
+                        <div class="col-lg-4">
+                            <aside class="widget bt-about-footer-widget">
+                                <div class="widget-content">
+                                    <div class="about-logo">
+                                        <a href="{% url 'index' %}"><img src="{% static 'assets/images/logo.png' %}" alt="Logo"></a>
+                                    </div>
+                                    <p>It is indeed a great privilege for me and my team to present M J Naidu Super Speciality hospital,Vijayawada and Jangareddygudem, to you.</p>
+                                </div>
+                            </aside>
+                        </div><!--~./ end about footer widget ~-->
+
+                        <!--~~~~~ Start Widget Business Hours ~~~~~-->
+                        <div class="col-lg-4">
+                            <aside class="widget widget-business-hours">
+                                <h2 class="widget-title">Business Hours</h2>
+                                <div class="widget-content">
+                                    <h4>Opining Days</h4>
+                                    <ul>
+                                        <li>Monday – Friday <span>9.00am to 6.00pm</span></li>
+                                        <li>Saturday <span>11.00am to 2.00pm</span></li>
+                                    </ul>
+                                    
+                                </div>
+                            </aside>
+                        </div><!--~./ end widget business hours  ~-->
+
+                        <!--~~~~~ Start Subscribe Widget~~~~~-->
+                        <div class="col-lg-3">
+                            <aside class="widget tb-subscribe-widget">
+                                <h2 class="widget-title">Newsletter</h2>
+                                <div class="widget-content">
+                                    <div class="subscribe-form">
+                                        <!-- Subscribe form -->
+                                        <form class="dv-form" id="mc-form">
+                                            <div class="form-group">
+                                                <input id="mc-email" name="EMAIL" placeholder="Enter Your Email Address" type="email">
+                                            </div>
+                                            <button class="btn btn-default" name="Subscribe" id="subscribe-btn" type="submit">Thank You</button>
+                                        </form>
+                                     </div>
+                                </div>
+                            </aside>
+                        </div><!--~./ end subscribe widget ~-->
+                    </div>
+                </div>
+            </div><!--~./ end footer widgets area ~-->
+
+          
+            <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                Start Footer Bottom Area
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+            <div class="footer-bottom-area">
+                <div class="container">
+                    <div class="row align-items-center">
+                       
+                        <div class="col-md-12">
+                            <div class="copyright-text">
+                                <p>© 2020  M J Naidu Super Speciality hospital. Powered By <a href="#">Medeaz</a></p>
+                            </div><!--~./ end footer menu ~-->
+                        </div>
+                    </div>
+                </div>
+            </div><!--~./ end footer bottom area ~-->
+        </footer><!--~./ end site footer ~-->
+        
+    </div><!--~~./ end site content ~~-->
+    
+    <!-- All The JS Files
+    ================================================== --> 
+  
+    <script src="{% static 'assets/js/jquery.js' %}"></script>
+    <script src="{% static 'assets/js/popper.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery-validate.bootstrap-tooltip.min.js' %}"></script>
+    <script src="{% static 'assets/js/slick.js' %}"></script>
+    <script src="{% static 'assets/js/theia-sticky-sidebar.min.js' %}"></script>
+    <script src="{% static 'assets/js/ResizeSensor.min.js' %}"></script>
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/js/packery-mode.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.fitvids.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'assets/js/simple-scrollbar.min.js' %}"></script>
+    <script src="{% static 'assets/js/scrolla.jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/odometer.min.js' %}"></script>
+    <script src="{% static 'assets/js/isInViewport.jquery.js' %}"></script>
+    <script src="{% static 'assets/js/TweenMax.min.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script><!-- main-js -->
+  
+     <div class="modal fade bd-example-modal-lg" id="modal_box11" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal_body text-center">
+                    <div class="container">
+                      
+                        <div class="row pt-3">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+<!--                                <h4>Top Cities</h4>-->
+                              <div class="txt-center margin-top-xl row">
+                                    <!---->
+                                  <div class="col-md-2"><a class="search-tags"><img src="{% static 'assets/images/cities/delhi.png' %}">New Delhi</a></div>
+                                  <div class="col-md-2"><a class="search-tags"><img src="{% static 'assets/images/cities/amaravathi.png' %}">Amaravathi</a></div>
+                                  <div class="col-md-2"><a class="search-tags"><img src="{% static 'assets/images/cities/bangalore.png' %}">Bengaluru</a></div>
+                                  <div class="col-md-2"><a class="search-tags"><img src="{% static 'assets/images/cities/mumbai.png' %}">Mumbai</a></div>
+                                  <div class="col-md-2"><a class="search-tags active"><img src="{% static 'assets/images/cities/ Vijayawada.png' %}"> Vijayawada</a></div>
+                                  <div class="col-md-2"><a class="search-tags"><img src="{% static 'assets/images/cities/chennai.png' %}">Chennai</a></div>
+                                 
+                                
+                                  
+                                   
+<!--                                    <a class="search-tags"><img src="{% static 'assets/images/cities/k.png' %}">Kolkata</a>-->
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                           </div>    
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div> 
+    <div class="modal fade bd-example-modal-lg" id="modal_box2" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal_body text-center">
+                    <div class="container">
+                      
+                        <div class="row pt-3">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <img src="{% static 'assets/images/others/hero2.png' %}" alt="About Mock" />
+
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="contact-block-areas contact-form-area">
+                                <form method="post" class="contact-form hg-form-email">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input name="name" type="text" placeholder="Full Name">
+                                            </div>
+                                        </div><!-- /.col-md-6 -->                 
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input name="email" type="email" placeholder="Email Address">
+                                            </div>
+                                        </div><!-- /.col-md-6 -->             
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input name="phone" type="text" placeholder="Phone Number">
+                                            </div>
+                                        </div><!-- /.col-md-6 -->
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input name="subject" type="text" placeholder="Subject">
+                                            </div>
+                                        </div><!-- /.col-md-6 -->
+                                        <!-- <div class="col-md-12">
+                                        <select name="treatment" class="form-input full-width " title="Please Select Before Submit" required="" ><option value="">Select Treatment</option><optgroup label="Proctology"><option value="Proctology_Piles">Piles</option><option value="Proctology_Fistula">Fistula</option><option value="Proctology_Fissure">Fissure</option><option value="Proctology_Pilonidal Sinus">Pilonidal Sinus</option></optgroup><optgroup label="Laparoscopy"><option value="Laparoscopy_Hernia Treatment">Hernia Treatment</option><option value="Laparoscopy_Gallstone Treatment">Gallstone Treatment</option><option value="Laparoscopy_Rectal Prolapse Treatment">Rectal Prolapse Treatment</option><option value="Laparoscopy_Appendicitis Treatment">Appendicitis Treatment</option><option value="Laparoscopy_Hysterectomy">Hysterectomy</option></optgroup><optgroup label="Gynaecology"><option value="Gynaecology_Hysteroscopy">Hysteroscopy</option><option value="Gynaecology_Female Genital Procedures">Female Genital Procedures</option><option value="Gynaecology_Vaginal Cyst">Vaginal Cyst</option><option value="Gynaecology_Irregular Periods">Irregular Periods</option></optgroup><optgroup label="E.N.T"><option value="E.N.T_Sinusitis Treatment">Sinusitis Treatment</option><option value="E.N.T_Deviated Nasal Septum Treatment">Deviated Nasal Septum Treatment</option><option value="E.N.T_Hearing Problem Treatment">Hearing Problem Treatment</option><option value="E.N.T_Tonsilitis Treatment">Tonsilitis Treatment</option><option value="E.N.T_Adenoid Treatment">Adenoid Treatment</option></optgroup><optgroup label="Urology"><option value="Urology_Kidney Stone Treatment">Kidney Stone Treatment</option><option value="Urology_Varicocele">Varicocele</option><option value="Urology_Hydrocele">Hydrocele</option><option value="Urology_Phimosis">Phimosis</option><option value="Urology_Cystoscopy">Cystoscopy</option></optgroup><optgroup label="Vascular"><option value="Vascular_Varicose Veins">Varicose Veins</option></optgroup></select>
+                                        </div> -->
+                                        <!-- <div class="col-md-12">
+                                            <div class="form-group">
+                                                <select name="treatment" class="form-input full-width " title="Please Select Before Submit" required="">
+                                                    <option value="1">Select Choose</option>   
+                                                    <option value="1">Male</option>
+                                                    <option value="2">Female</option>
+                                                    <option value="3">Child</option>
+                                            </div>                                           
+                                         </div> -->
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <textarea name="message" placeholder="Message"></textarea>
+                                            </div>
+                                        </div><!-- /.col-md-12 -->
+
+                                        <div class="col-md-12 text-center">
+                                            <button type="submit" class="btn btn-default btn-contact">Send OTP</button>
+                                        </div><!-- /.col-md-12 -->
+                                    </div><!-- /.row -->
+                                </form><!-- /.contact-form -->
+                            </div><!-- /.contact-form-area -->                      
+                             </div>
+                           </div>    
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div> 
+</body>
+
+</html>

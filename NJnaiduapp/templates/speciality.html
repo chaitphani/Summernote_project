@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% load static %}                                          
+{% block content %}
+{% for x in spc %}
+        <section class="inner-banner">
+            <div class="container">
+                <h2 class="inner-banner__title"> <span>{{x.speciality_name}}</span></h2><!-- /.inner-banner__title -->
+                <ul class="thm-breadcrumb">
+                    <li class="thm-breadcrumb__item"><a class="thm-breadcrumb__link" href="{% url 'index' %}">Home</a></li>
+                    <li class="thm-breadcrumb__item current"><a class="thm-breadcrumb__link" href="{% url 'spec' slug=x.slug %}">{{x.speciality_name}}</a></li>
+                </ul><!-- /.thm-breadcrumb -->
+            </div><!-- /.container -->
+        </section>
+        
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Start Portfolio Page Block
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <div class="portfolio-page-block portfolio-page-style-three mrb-172">
+            <div class="container">
+                <div class="row">
+                    <div class="section-header">
+                        <p>{{x.speciality_description|safe}}</p>
+                    </div>
+                    </div>
+            </div>
+        </div>
+        <!-- <div class="portfolio-page-block portfolio-page-style-three mrb-172">
+            <div class="container">
+                <div class="row">
+                    <div class="section-header">
+                        <h3 class="title">Radiology</h3>
+                        <h4 >What is an MRI scan?</h4>
+                        <p>Magnetic Resonance Imaging, or MRI, is a painless, diagnostic test that allows radiologists (doctors who specialize in the use of imaging) to see inside some areas of the body which cannot be evaluated using other modalities. It is safe, painless and comfortable procedure that emits no radiation. Instead MRI combines computer technology with magnetism and radio waves to create multiple real time pictures of inside your body. After these images are processed, they are interpreted by Radiologists to detect a disease or injury.
+                        </p>
+    
+                        <h4>Benefits:</h4>
+                        <ul class="grid">
+                        <li>MRI is a non-invasive imaging technique that does not involve exposure to radiation.</li>
+                        <li>MRI images of the brain and other cranial structures are clearer and more detailed than with other imaging methods.</li>
+                        <li>MRI is the most sensitive exam for brain tumors.</li>
+                        </ul>
+                        <div class="row col-md-12">
+                            <div class="col-md-7">
+                                <h4>What to do to prepare for your scan?</h3>
+                                <p>
+                                <b>Food and drink</b> - You may eat or drink anything you like before a typical MRI test. If you are having your abdomen / pelvis scanned (including MRCP), it may be necessary for you to fast for 4 hours before the test. If the patient requires anesthesia, please refer to the guidelines below
+                                </p>
+                                <p>
+                                <b>Medications</b> - It is important for you to keep to your regular medication schedule unless advised by your doctor.
+                                </p>
+                                <p>
+                                <b>Safety</b>- MRI scanners do not use x-rays. Instead, they use a very strong magnet and a radio frequency. It is important to tell the MRI technologist if there is a chance you could be pregnant. There is no evidence that MRI is unsafe for a developing fetus, (however, it should be used with discretion).
+                                </p>
+                                <p>
+                                <b>Surgical implants</b> - Patients with any kind of metallic implant anywhere in the body should not have an MRI unless their physician or radiologist is fully aware of the device and has approved the MRI procedure. Patients who have a pacemaker, cochlear implant or infusion pumps should not undergo an MRI.
+                                </p>
+                                <p>
+                                <b>When to arrive</b> - You should arrive 15 minutes before your scheduled appointment. This allows time for you to complete any necessary paperwork, change your clothes for your scan and discuss about your medical history with our doctors before we start your scan. We suggest that you call the hospital on 022 - 24447567 before starting from home so that we can inform you in case there is a delay. Please bring all your relevant previous investigations and doctors notes.
+                                </p>
+                                </div>
+                                <div class="col-md-5">
+                                    <img src="{% static 'assets/images/others/mri.jpg' %}">
+                                </div>
+                        </div>
+                        <div class="col-md-12">
+                        <h4>What happens during the scan?</h3>
+                        <p>
+                        <b>Clothing / Metallic objects</b> - For all MRI scans, you most likely will change into a hospital gown. Our changing area is private and there is a secure locker for your clothes. It is best, however, if you leave valuable items at home. If you are wearing anything metallic, such as jewellery, dentures, glasses or hearing aids, that might interfere with the MRI scan, we will ask you to remove them. You should not have your credit / debit cards in your pockets during the scan because the MRI magnet can affect the magnetic strip on the card. Patients who are undergoing a brain scan should not wear make-up as some brands contain metal.
+                        </p>
+                        <p>
+                        Scanning - Before the scan, your detailed history will be taken by the Radiologist. Your technologist will then bring you into the MRI scan room where you will lie down on the patient table. The technologist positions the part of your body to be scanned in the middle of the large cylindrical magnet. The scanner does not touch you, nor do you feel anything. Because the scanner does make a loud knocking noise when it takes the images, the technologist will give you cotton plugs and /or headphones to damper the sound. The technologist leaves the room, but is in full view and communication with you through the observation window and microphone in the adjoining room. You will be given a "rubber squeeze" which can be pressed if you are uncomfortable or want immediate attention. It raises an alarm so that the scanner can be stopped and the MRI technologist can come and assist you. It is important for you to lie very still and, at some points, you may be asked to briefly hold your breath as the image is taken.
+                        </p>
+                        <p>
+                        <b>Length of scan</b> - Each MRI scan is individualized and tailored to each patient's needs. So, if you've had a MRI scan before, don't be concerned if this one is longer or shorter. After your preliminary scans, if you require a contrast medium, the technologist will bring you out of the magnet and the Nurse / Radiologist will inject the contrast into the IV placed in your arm. The technologist then returns you to your original position in the magnet. Since we need the images before and after the contrast injection to exactly coincide, it is important that you do not move while the contrast medium is being administered. After all the images are taken, you will be brought out of the scanner room. You may then get dressed and leave.
+                        </p>
+                        <p>
+                        <b>Contrast medium</b> - Contrast medium,(sometimes called dyes) highlight your organs and blood vessels and help the radiologist to see them better. At a prior time, you may have already been exposed to a contrast medium if you have had a kidney scan, angiogram or a CT scan. The contrast material used is safe and does not contain iodine. The incidence of reaction is extremely rare. In fact, most patients will feel nothing at all during or after the injection. However, if you suffer from kidney problems, please inform our staff.
+                        </p>
+                        <h4>What happens after the scan?</h4>
+                        <p>You have no restrictions after having a MRI scan and can go about your normal activities.</p>
+                        <p><b>Results / Reports</b> - The radiologist will read the scans within 24 working hours, In urgent situations report can be made available. Your reports along with films and a CD containing all images can be picked up from the MRI reception between 6 - 8 pm the next working day.
+                        </p>	
+                        <h4>Discharge</h4>
+                        <p>
+                        The patient will be observed for 1-2 hours in the recovery area and discharged thereafter.<br>
+                        The MRI scan lasts for about 40-60 minutes during which the patient is required to lie still. It is understandable that most children will not be able to do so. In this situation necessary medication shall be administered to the child by a qualified anaesthetist to calm the child down. During the procedure the child shall be monitored continuously by the anaesthetist.
+                        </p>
+                        <h4>Benefits to the patients</h4>
+                        <p>
+                        <b>Relaxing Ambience:</b> Generally it takes a long time for a patient for MRI scan and this becomes boring and irritating, but the patient has to undergo all this trouble. With the new MRI Suites at Hinduja Hospital, the ambience makes the difference. The picture theme, the music and the lighting of the entire suites makes the MRI experience very pleasant for the patients
+                        </p>
+                        <p><b>Quick Scanning:</b> The total time taken for scanning is less.</p>
+                        <p><b>Reduced Claustrophobia:</b> The wide bore of the MRI Suites makes the patient experience less daunting and less claustrophobic.</p>
+                        <h4>Colour dopler</h4>
+                        <p>
+                        A dedicated peripheral vascular Doppler machine is a real boon to department of imaging. Colour Doppler is a useful and non-invasive screening tool.</p>
+                        <p>This state-of-the-art equipment armed with multiple probes can do carotid, peripheral vascular, renal, small parts and gynecological Doppler studies
+                        </p>
+                </div>
+    
+            </div>
+                    </div>
+                </div>
+            </div> -->
+                
+          
+{% endfor %} 
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}                                          
+{% block content %}
+{% for x in pro %}
+        <section class="inner-banner">
+            <div class="container">
+                <h2 class="inner-banner__title"> <span>{{x.procedure_name}}</span></h2>
+                <ul class="thm-breadcrumb">
+                    <li class="thm-breadcrumb__item"><a class="thm-breadcrumb__link" href="{% url 'index' %}">Home</a></li>
+                    <li class="thm-breadcrumb__item current"><a class="thm-breadcrumb__link" href="{% url 'procedure' slug=x.slug %}">{{x.procedure_name}}</a></li>
+                </ul><!-- /.thm-breadcrumb -->
+            </div><!-- /.container -->
+        </section>
+        
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Start Portfolio Page Block
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <div class="portfolio-page-block portfolio-page-style-three mrb-172">
+            <div class="container">
+                <div class="row">
+                    <div class="section-header">
+                        <p>{{x.procedure_description|safe}}</p>
+                    </div>
+                    </div>
+            </div>
+        </div>
+{% endfor %} 
+{% endblock %}

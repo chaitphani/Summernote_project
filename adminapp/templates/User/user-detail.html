@@ -1,0 +1,22 @@
+<!-- include summernote css/js-->
+{% extends "base.html" %}
+{% load static %}                                          
+{% block content %}
+<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.3/summernote.css" rel="stylesheet">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.3/summernote.js"></script>
+
+       
+        <div class="portfolio-page-block portfolio-page-style-three mrb-172">
+            <div class="container">
+                <!-- Content Row -->
+                <div class="row">
+                    <div class="section-header">
+                        <p>{{  loki.description|safe  }}</p>
+                        
+                    </div>
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+                
+          
+        </div><!-- /.portfolio-page-block -->  
+{% endblock %}

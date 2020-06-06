@@ -1,0 +1,126 @@
+
+
+{% extends 'User/index.html' %}
+{% block content %}
+
+
+ 
+
+ <style>
+
+
+ </style>
+ 
+<div id="main-wrapper">
+       
+ 
+    <div class="page-wrapper">
+      
+        <div class="row page-titles">
+            <div class="col-md-5 align-self-center">
+                <h3 class="text-themecolor">Whyus Create</h3>
+            </div>
+            <div class="col-md-7 align-self-center">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'dashboard' %}">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'whyus_create' %}">Whyus create</a></li>
+                </ol>
+            </div>
+            <div class="">
+                <button class="right-side-toggle waves-effect waves-light btn-inverse btn btn-circle btn-sm pull-right m-l-10"><i class="ti-settings text-white"></i></button>
+            </div>
+        </div>
+        <div class="container-fluid">
+         
+ 
+          
+                    <!-- {{ form.as_p }} -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card card-outline-info">
+                                <div class="card-header">
+                                    <h4 class="m-b-0 text-white">Why us Create</h4>
+                                </div>
+                                <div class="card-body">
+                                    <form method="POST">
+                                        {% csrf_token %}
+                                        <div class="form-body">
+                                            <div class="form-group row">
+                                                <label for="id_title" class="control-label text-right col-md-3">Title:</label>
+                                                <div class="col-md-9">
+                                                    <input type="text" name="title" id="id_title"
+                                                    maxlength="200" value="{{book.title}}" class="form-control">
+                                                 
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="id_description"  class="control-label text-right col-md-3">Description</label>
+                                                <div class="col-md-9">
+                                                <textarea name="description" required
+                                                cols="40" id="id_description"  rows="5" class="form-control">{{book.description}}</textarea>
+                                                </div>
+                                            </div>
+                                        
+                                         
+                                      
+                                            <div class="form-group row">
+                                                <label for="id_icon" class="control-label text-right col-md-3">Icon:</label>
+                                                <div class="col-md-9">
+                                                    <input type="text" name="icon" 
+                                                    id="id_icon" maxlength="200" value="{{book.icon}}" class="form-control">
+                            
+                                                </div>
+                                            </div>
+                                          
+                                            <div class="form-group row ">
+                                                <label 
+                                                    class="control-label text-right col-md-3">Status</label>
+                                                <div class="col-sm-9">
+                                                    <div class="m-b-10">
+                                                        <label class="custom-control custom-checkbox">
+                                                            <input type="checkbox" name="on" class="custom-control-input" {% if book.status %} checked {% else %} unchecked {% endif %}  >
+                                                            <span class="custom-control-label"></span>
+                                                        </label>
+                                                    </div>
+        
+        
+                                                </div>
+        
+                                            </div>
+                                          
+                                           
+                                        
+                                        <div class="form-actions">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="row">
+                                                        <div class="offset-sm-3 col-md-9">
+                                                            <!-- <button type="submit" class="btn btn-success"> <i class="fa fa-check"></i> Submit</button>
+                                                            <button type="button" class="btn btn-inverse">Cancel</button> -->
+                                                             <input type="submit" class="btn btn-success" value="Submit" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- <input type="submit" value="Submit" /> -->
+            
+
+        </div>
+
+        
+  
+    </div>
+ 
+</div>
+</div>
+
+    {% endblock %}
+
+

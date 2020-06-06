@@ -1,0 +1,19 @@
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <p><label for="id_user_name">User name:</label> <input type="text" value="{{book.user_name}}" name="user_name" maxlength="50"
+            id="id_user_name"></p>
+    <p><label for="id_dateofbirth">Dateofbirth:</label> <input type="date" value="{{book.dateofbirth|date:'Y-m-d'}}" name="dateofbirth" id="id_dateofbirth"></p>
+    <p><label for="id_email">Email:</label> <input type="email" value="{{book.email}}" name="email" maxlength="254" id="id_email"></p>
+    <p><label for="id_mobile_number">Mobile number:</label> <input type="text" value="{{book.mobile_number}}" name="mobile_number" maxlength="15"
+            id="id_mobile_number"></p>
+    <p><label for="id_password">Password:</label> <input type="password" value="{{book.password}}" name="password" maxlength="200" id="id_password">
+    </p>
+    <p><label for="id_address_line_1">Address line 1:</label> <input type="text" value="{{book.address_line_1}}" name="address_line_1" maxlength="200"
+            id="id_address_line_1"></p> 
+    <p><label for="id_address_line_2">Address line 2:</label> <input type="text"  value="{{book.address_line_2}}" name="address_line_2" maxlength="200"
+            id="id_address_line_2"></p>
+    <p><label for="id_status">Status:</label> <input type="checkbox"  checked name="status" id="id_status"></p>
+    <p><label for="id_user_image">User image:</label> <input type="file"  value="{{book.user_image.url}}" name="user_image" accept="image/*"
+            id="id_user_image"></p>
+    <input type="submit" value="Submit" />
+</form>

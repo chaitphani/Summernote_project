@@ -1,0 +1,232 @@
+{% extends "base.html" %}
+{% load static %}                                          
+{% block content %}
+        <form method="POST" enctype="multipart/form-data">
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Hero Block
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <div id="hero-block" class="hero-block style-two pd-t-210 pd-b-120 mrb-75">
+           <div class="hero-shape-overlay bg-image-100" style="background-image: url({% static 'assets/images/shape/hero2.png' %)"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="hero-content-area">
+                            {% for x in sec1 %}
+                            <h2 class="hero-title mrb-20">{{x.title}}</h2><!-- /.hero-title -->
+                            <div class="hero-desc">
+                                <p>{{x.description}}</p>
+                            </div><!-- /.hero-desc -->
+                            <div class="hero-block-bottom mrt-60">
+                                <div class="form-group-btn">
+                                    <a class="btn btn-default mrr-30" href="#" >Contact Us</a>
+                                    <a href="#" class="btn-call-to">Call us or for any inquiry<span>{{x.mobile_number}}</span></a>
+                                </div><!-- /.form-group-btn -->
+                                <!-- /.social-status-->
+                            </div><!-- /.hero-block-bottom -->
+                        </div><!-- /.hero-content-area -->
+                     
+                    </div><!-- /.col-lg-6 -->
+
+                    <div class="col-lg-6">
+                        <div class="hero-thumbnail-area">
+                            <figure class="hero-thumb">
+                                <!-- <img src="{% static 'assets/images/others/hero2.png" alt="Thumbnail">                               -->
+                                  <img class="img-rounded" src="{{x.section_image.url}}" />
+                                  
+                            </figure>
+                        </div><!-- /.hero-thumbnail-area -->
+                    </div><!-- /.col-lg-6 -->
+                    {% endfor %}
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /.hero-block -->
+       
+        <div class="facility-block mrb-200">
+            <div class="container ">
+                <div class="row">
+                    {% for y in spe %}
+                    <div class="col-lg-3 col-md-6">  
+                        <div class="facility-card hg-fadeInUp animated" data-animate="hg-fadeInUp" data-duration="1.0s" data-delay="0.1s" data-offset="100" style="animation-duration: 1s; animation-delay: 0.1s; visibility: visible;">
+                            <div class="facility-icon color-zinnwaldite">
+                                <img src="{{y.image.url}}" alt="Shape">
+                                
+                            </div><!-- /.facility-icon -->
+                            <div class="facility-info">
+                                <h2 class="facility-title">{{y.procedure_name}}</h2><!-- /.facility-title -->
+                                <!-- <p>Why money's in that office, right? If she start giving means some bullet about ain't there.</p> -->
+                            </div><!-- /.facility-info -->
+                        </div><!-- /.facility-card -->
+                    </div><!-- /.col-lg-6 -->
+                    {% endfor %}
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div>
+
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Start service Block
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+      
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Start About Us Block
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        {% for z in sec2 %}
+        <div id="about-block" class="about-us-block about-style-two pd-t-100 pd-b-100 mrb-200">
+            <div class="mock-up-thumb-back bg-image-100" style="background-image: url({{ z.section2background_image.url }})"></div><!-- /.mock-up-thumb-back -->
+            
+            <div class="container">
+                <!-- Title Row -->
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-lg-5">
+                        <div class="mock-up-thumb reveal-right">
+                            <img src="{{z.section2_image.url}}" alt="About Mock" />
+<!--
+                            <div class="video-btn-area">
+                                <a href="https://player.vimeo.com/video/4760972" class="video-btn video-popup">
+                                    <span class="icon-play31"></span>
+                                </a>
+                            </div> /.video-btn-area 
+-->
+                        </div><!-- /.mock-up-block -->
+                    </div><!-- /.col-lg-5 -->
+
+                    <div class="col-lg-6">
+                        <div class="section-title">
+                            <h2 class="title-main">{{z.title}}</h2><!-- /.title-main -->
+                        </div><!-- /.section-title -->
+                        
+                        <div class="block-content-info about-content">
+                            <p class="description">{{z.description}}</p>
+                            <div class="hg-promo-numbers ml-t-20">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="tg-promo-number">
+                                            <div class="odometer" data-odometer-final={{z.happy_patients}}></div> <i class="fa fa-plus"></i><!-- /.odometer -->
+                                            <h4 class="promo-title">Happy Patients</h4><!-- /.promo-title -->
+                                        </div><!-- /.tg-promo-number -->
+                                    </div><!-- /.col-lg-6 -->
+                                    
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="tg-promo-number">
+                                            <div class="odometer" data-odometer-final={{z.surgeries}}></div> <i class="fa fa-plus"></i><!-- /.odometer -->
+                                            <h4 class="promo-title">Surgeries</h4><!--  /.promo-title -->
+                                        </div><!-- /.tg-promo-number -->
+                                    </div><!-- /.col-lg-6 --> 
+                                                   
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="tg-promo-number">
+                                            <div class="odometer" data-odometer-final={{z.doctors}}></div> <i class="fa fa-plus"></i><!-- /.odometer -->
+                                            <h4 class="promo-title">Doctors</h4><!--  /.promo-title -->
+                                        </div><!-- /.tg-promo-number -->
+                                    </div><!-- /.col-lg-6 -->   
+                                                 
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="tg-promo-number">
+                                            <div class="odometer" data-odometer-final={{z.clinics}}></div><i class="fa fa-plus"></i><!-- /.odometer -->
+                                            <h4 class="promo-title">Clinics</h4><!-- /.promo-title -->
+                                        </div><!-- /.tg-promo-number -->
+                                    </div><!-- /.col-lg-6 -->
+                                </div><!-- /.row -->
+                            </div><!-- /.block-promo-numbers -->
+                        </div><!-- /.about-content -->
+                    </div><!-- /.col-lg-6 -->
+                    {% endfor %}
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!--~~./ end about us block ~~-->
+        
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Start Innovation Block
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <div id="innovation-block" class="innovation-block innovation-block-two mrb-1955">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <div class="section-title text-center">
+                            <h2 class="title-main">Our Speciality</h2><!-- /.title-main -->
+                            <div class="divider">
+                                <img src="{% static 'assets/images/icon/divider.png' %}" alt="icon">
+                            </div>
+                        </div><!-- /.section-title -->
+                    </div><!-- /.col-12 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+            
+            <div id="innovation-carousel" class="owl-carousel" data-owl-items="4" data-owl-margin="30" data-owl-dots="0" data-owl-loop="1" data-owl-center="1">
+                {% for j in specialities %}
+                <div class="item">
+                    <div class="portfolio-item portfolio-one">
+                        <figure class="portfolio-thumb">
+                            <img src="{{j.image.url}}" alt="Portfolio Item">
+                            <div class="content">
+                                <div class="portfolio-title">
+                                    <h3><a href="{{j.url}}">{{j.speciality_name}}</a></h3>
+                                </div>
+                                <div class="icon">
+                                    <a href="{{j.url}}"><span class="fa fa-long-arrow-right"></span></a>
+                                </div>
+                            </div><!-- /.content -->   
+                        </figure><!-- /.portfolio-thumb -->               
+                    </div><!-- /.portfolio-item -->
+                </div><!-- /.item -->
+                {% endfor %}
+            </div><!-- /#innovation-carousel-two -->
+            
+            <div class="btn-links-area text-center">
+                <button class="btn-links btn-prev">
+                    <span class="icon-arrows"></span>
+                </button>
+                <button class="btn-links btn-next">
+                    <span class="icon-arrows-1"></span>
+                </button>
+            </div><!--~./ end btn links area ~-->
+        </div><!-- /.innovation-block -->
+        
+        <div id="service-block" class="service-block mrb-200  pt-5">
+            <div class="container ml-b-30">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 col-md-8">
+                        <div class="section-title text-center" data-animate="hg-fadeInUp" data-duration="1.0s" data-offset="100">
+                             <h2 class="title-main">Why Us ? </h2>
+                            <div class="divider">
+                                <img src="{% static 'assets/images/icon/divider.png' %}" alt="icon">
+                            </div>
+                        </div><!-- /.section-title -->
+                    </div><!-- /.col-lg-6 -->
+                </div><!-- /.row -->
+           
+                <div class="row">
+                    {% for k in whyus %}
+                    <div class="col-lg-6">  
+                        <div class="service-card-two" data-animate="hg-zoomIn" data-duration="1.0s" data-offset="100">
+                            <div class="{{k.iconcolour}}">
+                                <span class="{{k.icon}}"></span>
+                            </div><!-- /.service-icon -->
+                            <div class="service-info">
+                                <h2 class="service-title">{{k.title}}</h2><!-- /.service-title -->
+                                <p>{{k.description}}</p>
+                            </div><!-- /.service-info -->
+                        </div><!-- /.service-card -->
+                    </div><!-- /.col-lg-6 -->
+                    {% endfor %}
+                </div>
+      </div>
+        </div>
+  
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Start App Download Block
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+       
+        <!-- testimonial -->
+       
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Start Call To Action
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+ 
+        <section class="cta-two">
+            <div class="container">
+                <h2 class="cta-two__title">Have Orthopaedics Problem : Call us at <a href="tel:+91-9985 104 104" class="cta-two__highlight">+91-9985 104 104</a> or make an <a href="#"   data-toggle="modal" data-target="#modal_box2"class="cta-two__highlight cta-two__link">Appointment</a></h2><!-- /.cta-two__title -->
+            </div><!-- /.container -->
+        </section>
+    </form>
+        {% endblock %}
+        

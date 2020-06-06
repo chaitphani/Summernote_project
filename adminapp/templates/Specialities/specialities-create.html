@@ -1,0 +1,165 @@
+{% extends 'User/index.html' %}
+{% block content %}
+<style>
+    iframe.note-fullscreen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw !important;
+        height: 100vh !important;
+        z-index: 4000;
+    }
+</style>
+
+
+
+<div id="main-wrapper">
+
+
+    <div class="page-wrapper">
+
+        <div class="row page-titles">
+            <div class="col-md-5 align-self-center">
+                <h3 class="text-themecolor">Speciality create</h3>
+            </div>
+            <div class="col-md-7 align-self-center">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'dashboard' %}">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'specialities_create' %}">Speciality create</a></li>
+                </ol>
+            </div>
+            <div class="">
+                <button
+                    class="right-side-toggle waves-effect waves-light btn-inverse btn btn-circle btn-sm pull-right m-l-10"><i
+                        class="ti-settings text-white"></i></button>
+            </div>
+        </div>
+        <div class="container-fluid">
+
+
+
+            <!-- {{ form.as_p }} -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card card-outline-info">
+                        <div class="card-header">
+                            <h4 class="m-b-0 text-white">Speciality Create</h4>
+                        </div>
+                        <div class="card-body">
+                            <form method="POST">
+                                {% csrf_token %}
+                                <div class=" form-body">
+                                    <div class="col-md-12">
+                                        <h4>Speciality Description</h4>
+                                        <div class="col-md-12 form-group row">
+                                           
+                                            <div class="col-md-9">
+                                                <textarea name="description" required
+                                                cols="40" id="id_description" rows="5" class="form-control"></textarea>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div> 
+                                        <div class=" summernote-div" cols="40" rows="10"
+                                            summernote="{&#39;height&#39;: &#39;400px&#39;, &#39;width&#39;: &#39;50%&#39;}"
+                                            width="100%" height="400px">
+                                            <iframe id="id_description_iframe" src="/summernote/editor/id_description/"
+                                                frameborder="0" width="100%" height="400px"></iframe>
+                                        </div>
+                                    </div><br>
+                                    <div class="col-md-12 form-group row">
+                                        <label for="id_speciality_name"
+                                            class="control-label text-right col-md-3">Speciality name:</label>
+                                        <div class="col-md-9">
+                                            <input type="text" name="speciality_name" value="{{book.speciality_name}}" id="id_speciality_name"
+                                                maxlength="200" class="form-control">
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 form-group row">
+                                        <label for="id_meta_tag"
+                                            class="control-label text-right col-md-3">Meta tag:</label>
+                                        <div class="col-md-9">
+                                            <input type="text" name="meta_tag" id="id_meta_tag" value="{{book.meta_tag}}" maxlength="30" class="form-control">
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 form-group row">
+                                        <label for="id_meta_title"
+                                            class="control-label text-right col-md-3">Meta title:</label>
+                                        <div class="col-md-9">
+                                            <input type="text"  name="meta_title" id="id_meta_title" value="{{book.meta_title}}" maxlength="200" class="form-control">
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 form-group row">
+                                        <label for="id_meta_description"
+                                            class="control-label text-right col-md-3">Meta description:</label>
+                                        <div class="col-md-9">
+                                            <textarea type="text"  name="meta_description"  id="meta_description" maxlength="200" class="form-control">{{book.meta_description}}</textarea>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 form-group row">
+                                        <label for="id_meta_keywords"
+                                            class="control-label text-right col-md-3">Meta keywords:</label>
+                                        <div class="col-md-9">
+                                            <input type="text" name="meta_keywords" id="id_meta_keywords" value="{{book.meta_keywords}}" maxlength="200" class="form-control">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row ">
+                                        <label 
+                                            class="control-label text-right col-md-3">Status</label>
+                                        <div class="col-sm-9">
+                                            <div class="m-b-10">
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" name="on" class="custom-control-input" {% if book.status %} checked {% else %} unchecked {% endif %}  >
+                                                    <span class="custom-control-label"></span>
+                                                </label>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                 
+                                    <!-- <div class="col-md-12 form-group row">
+                                                <label for="id_description" class="control-label text-right col-md-3">Description:</label>
+                                                <div class="col-md-9">
+                                                    <textarea name="description" required
+                                                    cols="40" id="id_description" rows="5" class="form-control"></textarea>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div> -->
+
+                                    <div class="row col-md-12 form-group row">
+                                        <div class="col-md-12">
+                                            <input type="submit" class="btn btn-success pull-right" value="Submit" />
+                                        </div>
+                                    </div>
+
+
+
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <input type="submit" value="Submit" /> -->
+
+
+        </div>
+
+
+
+    </div>
+
+</div>
+</div>
+<script>
+    var settings_id_description = { "toolbar": [["style", ["style"]], ["font", ["bold", "italic", "underline", "superscript", "subscript", "strikethrough", "clear"]], ["fontname", ["fontname"]], ["fontsize", ["fontsize"]], ["color", ["color"]], ["para", ["ul", "ol", "paragraph"]], ["height", ["height"]], ["table", ["table"]], ["insert", ["link", "picture", "video", "hr"]], ["view", ["fullscreen", "codeview"]], ["help", ["help"]]], "height": "400px", "url": { "upload_attachment": "/summernote/upload_attachment/", "language": "/static/summernote/lang/summernote-en-US.min.js" }, "lang": "en-US", "width": "100%", "airMode": false };
+</script>
+{% endblock %}

@@ -1,0 +1,333 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+
+<!-- Mirrored from htmlguru.net/wekala/wekala/index02.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Jan 2020 06:23:48 GMT -->
+
+<head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Specific Meta
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="M J Naidu Super Speciality hospital">
+    <meta name="keywords" content="M J Naidu Super Speciality hospital" />
+    <meta name="author" content="creative-wp">
+
+    <!-- Titles
+    ================================================== -->
+    <title>M J Naidu Super Speciality hospital</title>
+
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="{% static 'assets/images/favicon.ico' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'assets/images/android-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'assets/images/apple-icon-144x144.png' %}">
+
+    <!-- Custom Font
+    ================================================== -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,500i,600,700,800,900&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/simple-scrollbar.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/odometer-theme-default.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+    <script src="{% static 'assets/js/modernizr.min.js' %}"></script>
+
+    <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">>
+
+</head>
+
+<body data-spy="scroll" data-offset="170" data-target=".navigation-area">
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Start Preloader
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div><!-- /preloader-icon -->
+        </div><!-- /preloader-inner -->
+    </div><!-- /preloader -->
+
+    <!--********************************************************-->
+    <!--********************* SITE CONTENT *********************-->
+    <!--********************************************************-->
+    <div class="site-content home-two">
+
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Start Site Header
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+        <header class="site-header default-header-style">
+            <div class="header-top">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="social-status mrt-900">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="search_wid_sidebar">
+                                <form>
+                                    <input type="search"
+                                        placeholder="Search for Disease Treatment, Symptoms, Healing...">
+                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="header-navigation-right">
+                                <ul>
+                                    <li>
+                                        <div class="contact-info">
+                                            <i class="fa fa-phone"></i> <a href="#">+91-9985 104 104</a>
+                                        </div>
+                                        <!--~./ contact-info ~-->
+                                    </li>
+                                    <li>
+                                        <div class="lets-talk-areas">
+                                            <a href="#" data-toggle="modal" data-target="#modal_box1"
+                                                title="quick view"><i class="fa fa-map-marker"></i>
+                                                Vijayawada </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+
+                <div class="sticky-header main-bar-wraper navbar-expand-lg">
+                    <div class="main-bar clearfix ">
+                        <div class="container-fluid clearfix">
+                            <!-- website logo -->
+                            <div class="logo-header mostion">
+                                <a href="#" class="dez-page"><img src="{% static 'assets/images/logo.png' %}"
+                                        alt=""></a>
+                            </div>
+                            <!-- nav toggle button -->
+                            <button class="navbar-toggler collapsed navicon justify-content-end" type="button"
+                                data-toggle="collapse" data-target="#navbarNavDropdown"
+                                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                            <!-- extra nav -->
+                            <!--
+                <div class="extra-nav">
+                    <div class="extra-cell">
+                        <a href="contact.html" class="dez-page site-button primary">Inquire Now </a>
+                    </div>
+                </div>
+-->
+                            <!-- main nav -->
+                            <div class="header-nav navbar-collapse collapse justify-content-end" id="navbarNavDropdown">
+                                <ul class="nav navbar-nav">
+                                    <li ><a href="{% url 'index' %}"><span class="ti-home">Home</span></a>
+                                    </li>
+                                    {% for cat in category %}
+                                    {% if cat.category_name != 'Specialities' %}
+                                    <li>
+                                        {% if cat.item.all %}
+                                        <a href="#">{{cat}} <i class="fa fa-chevron-down"></i></a>
+                                      
+                            
+                                        <ul class="sub-menu">
+                                            {% for rav in cat.item.all %}
+                                            <li> <a {% if rav.item_name == 'Our Team' %} href="{% url 'our_team'  %}"
+                                                    {% else %} href="{% url 'items' slug=rav.slug %}" {% endif %}
+                                                    class="dropdown-item">{{rav}}</a>
+                                            </li>
+                                            {% endfor %}
+                                            <!-- <li><a class="dropdown-item" href="chairman.html">Chairman's Profile</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="our-team.html">Our Team</a></li>
+                                            <li><a class="dropdown-item" href="testimonial.html">Testimonial</a></li> -->
+                                        </ul>
+                                        {% else %}
+                                        <a {% if cat.category_name == 'Gallery' %} href="{% url 'event'  %}" {% else %} href="{% url 'cate' slug=cat.slug %}" {% endif %} aria-expanded="false">{{cat}} </a>
+                                        {% endif %}
+
+                                    </li>
+                                    {% else %}
+                                    <li>
+                                        <a href="{% url 'cate' slug=cat.slug %}">{{cat}} <i class="fa fa-chevron-down"></i> </a>
+
+                                        <ul class="sub-menu">
+                                            {% for cav in specialities %}
+                                            {% if cav.Procedure.all %}
+                                            <li><a href="#">{{cav.speciality_name }} <i
+                                                        class="fa fa-angle-right"></i></a>
+                                                        {% if cav.Procedure.all %}
+                                                <ul class="sub-menu"> 
+                                                    {% for proc in cav.Procedure.all %}
+                                                    <li><a href="{% url 'procedure' slug=proc.slug %}" class="dez-page">{{proc}}</a>
+                                                    </li>
+                                                    {% endfor %}
+                                                </ul>
+                                                {% endif %}
+                                            </li>
+                                            {% else %}  
+                                            <li><a href="#">{{cav.speciality_name }}  </a>
+
+                                                <ul class="sub-menus">
+                                                    {% if cav.Procedure.all %}
+                                                    {% for proc in cav.Procedure.all %}
+                                                    <li><a href="{% url 'procedure' slug=proc.slug %}" class="dez-page">{{proc}}</a>
+                                                    </li>
+                                                    {% endfor %}
+                                                    {% endif %}
+
+                                                </ul>
+
+                                            </li>
+                                            {% endif %}
+                                            {% endfor %}
+                                        </ul>
+
+
+                                    </li>
+                                    <!-- <li><a class="dropdown-item" href="chairman.html">Chairman's Profile</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="our-team.html">Our Team</a></li>
+                                            <li><a class="dropdown-item" href="testimonial.html">Testimonial</a></li> -->
+                                    {% endif %}
+                                    {% endfor %}
+                                </ul>
+
+
+                                <!-- <li><a href="#">Specialities <i class="fa fa-chevron-down"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="#">Arthoplasty <i class="fa fa-angle-right"></i></a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="htp-replacement.html" class="dez-page">HIP
+                                                            Replacement</a></li>
+                                                    <li><a href="knee-replacement.html" class="dez-page">Knee
+                                                            Replacement</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="under-maintenance.html" class="dez-page">Arthoscopy</a></li>
+                                            <li><a href="#">Orthopaedics <i class="fa fa-angle-right"></i></a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="arthritis.html" class="dez-page">Arthritis </a></li>
+                                                    <li><a href="bonetumours.html" class="dez-page">Bone Tumours </a>
+                                                    </li>
+                                                    <li><a href="illizarov.html" class="dez-page">Illizarov Technique
+                                                        </a></li>
+                                                    <li><a href="orthosuv.html" class="dez-page">Ortho Suv </a></li>
+                                                    <li><a href="osteoporosis.html" class="dez-page">Osteoporosis</a>
+                                                    </li>
+                                                    <li><a href="paediatric.html" class="dez-page">Paediatric
+                                                            Orthopaedics </a></li>
+                                                    <li><a href="trauma.html" class="dez-page">Trauma </a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a class="dropdown-item" href="spine.html">Spine</a></li>
+                                            <li><a class="dropdown-item" href="radiology.html">Radiology</a></li>
+                                            <li><a class="dropdown-item" href="painmanagement.html">Pain Management</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="physiotheraphy.html">Physiotheraphy</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="success-stories.html">Success Stories</a></li>
+                                    <li><a href="#">Patient Resources <i class="fa fa-chevron-down"></i></a>
+                                        <ul class="sub-menu">
+                                            <li> <a class="dropdown-item" href="empanelment.html">Empanelment</a></li>
+                                            <li> <a class="dropdown-item" href="ehs-ntr.html">EHS & NTR Vidya Seva</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="acl-rehab.html">ACL Rehab Protocol </a>
+                                            </li>
+                                        </ul>
+                                    </li> -->
+                                <!--
+                        <li><a href="#">Blog <i class="fa fa-chevron-down"></i></a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Blog Standard <i class="fa fa-angle-right"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="blog-standard.html" class="dez-page">Standard</a></li>
+                                        <li><a href="blog-standard-left-sidebar.html" class="dez-page">Standard Left Sidebar</a></li>
+                                        <li><a href="blog-standard-right-sidebar.html" class="dez-page">Standard Right Sidebar</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Blog Classic <i class="fa fa-angle-right"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="blog-classic-grid.html" class="dez-page">Classic</a></li>
+                                        <li><a href="blog-classic-left-sidebar.html" class="dez-page">Classic Left Sidebar</a></li>
+                                        <li><a href="blog-classic-right-sidebar.html" class="dez-page">Classic Right Sidebar</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Blog List <i class="fa fa-angle-right"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="blog-list-left-sidebar.html" class="dez-page">List Left Sidebar</a></li>
+                                        <li><a href="blog-list-right-sidebar.html" class="dez-page">List Right Sidebar</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="blog-details.html" class="dez-page">Blog Details</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li><a href="#">Shop <i class="fa fa-chevron-down"></i></a>
+                            <ul class="sub-menu">
+                                <li><a href="shop-columns.html" class="dez-page">Shop Columns</a></li>
+                                <li><a href="shop-columns-sidebar.html" class="dez-page">Shop Columns Sidebar</a></li>
+                                <li><a href="shop-product-details.html" class="dez-page">Product Details</a></li>
+                                <li><a href="shop-cart.html" class="dez-page">Cart</a></li>
+                                <li><a href="shop-checkout.html" class="dez-page">Checkout</a></li>
+                                <li><a href="shop-wishlist.html" class="dez-page">Wishlist</a></li>
+                                <li><a href="shop-login.html" class="dez-page">Shop Login</a></li>
+                                <li><a href="shop-register.html" class="dez-page">Shop Register</a></li>
+                            </ul>
+                        </li>
+-->
+                                <!-- <li><a href="packages.html">Packages</a></li>
+                                    <li><a href="gallery.html">Gallery</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                </ul> -->
+                                <div class="header-navigation-right">
+                                    <div class="lets-talk-area">
+                                        <a class="btn btn-default" data-toggle="modal" data-target="#modal_box2"
+                                            href="#">Book Appointment</a>
+                                    </div>
+                                    <!--~./ lets-talk-area ~-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--  /.container-fluid -->
+        </header>
+        <!--~~./ end site header ~~-->
+        <!--~~~ Sticky Header ~~~-->
+        <div id="sticky-header"></div>
+        <!--~./ end sticky header ~-->
+
+        {% block content %}
+        {% endblock %}
+
+        {% include "footer.html" %}

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}                                          
+{% block content %}
+{% for x in items %}
+        <section class="inner-banner">
+            <div class="container">
+                <h2 class="inner-banner__title"> <span>{{x.item_name}}</span></h2><!-- /.inner-banner__title -->
+                <ul class="thm-breadcrumb">
+                    <li class="thm-breadcrumb__item"><a class="thm-breadcrumb__link" href="{% url 'index' %}">Home</a></li>
+                    <li class="thm-breadcrumb__item current"><a class="thm-breadcrumb__link" href="{% url 'items' slug=x.slug %}">{{x.item_name}}</a></li>
+                </ul><!-- /.thm-breadcrumb -->
+            </div><!-- /.container -->
+        </section>
+        
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Start Portfolio Page Block
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <div class="portfolio-page-block portfolio-page-style-three mrb-172">
+            <div class="container">
+                <!-- Content Row -->
+                <div class="row">
+                    <div class="section-header">
+                        <h3 class="title">{{x.title}}</h3>	
+					<p>
+                        {{x.description|safe}}</p>
+                      
+                           
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+                
+          
+        </div><!-- /.portfolio-page-block -->  
+        </div>
+        {% endfor %}
+{% endblock %}

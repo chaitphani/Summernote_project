@@ -1,0 +1,88 @@
+{% extends 'User/index.html' %}
+{% block content %}
+<div class="page-wrapper">
+    <div class="row page-titles">
+        <div class="col-md-5 align-self-center">
+            <h3 class="text-themecolor">Category List</h3>
+        </div>
+        <div class="col-md-7 align-self-center">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'dashboard' %}">Home</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'category_list' %}">Category List</a></li>
+            </ol>
+        </div>
+        <div>
+            <button
+                class="right-side-toggle waves-effect waves-light btn-inverse btn btn-circle btn-sm pull-right m-l-10"><i
+                    class="ti-settings text-white"></i></button>
+        </div>
+    </div>
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Add & Remove Rows</h4>
+                        <!-- <h6 class="card-subtitle">You can add or remove rows with Footable</h6> -->
+                        <table id="demo-foo-addrow2" class="table table-bordered table-hover toggle-circle"
+                            data-page-size="7">
+                            <thead>
+                                <tr>
+                                    <th data-sort-initial="true" data-toggle="true">category_name</th>
+                                    <th>created_date</th>
+                                    <th>View</th>
+                                    <th data-sort-ignore="true" class="min-width">Action</th>
+                                </tr>
+                            </thead>
+                            <div class="m-t-40">
+                                <div class="d-flex">
+                                    <!-- <div class="mr-auto">
+                                        <div class="form-group">
+                                            <button id="demo-btn-addrow" class="btn btn-primary btn-sm"><i
+                                                    class="icon wb-plus" aria-hidden="true"></i>Add New Row
+                                            </button>
+                                            <small>New row will be added in last page.</small> </div>
+                                    </div> -->
+                                    <div class="ml-auto">
+                                        <div class="form-group">
+                                            <input id="demo-input-search2" type="text" placeholder="Search"
+                                                autocomplete="off">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <tbody>
+                                {% for book in form %}
+                                <tr>
+                                    <td>{{ book.category_name }}</td>
+                                    <td>{{ book.created_date }}</td>
+                                   
+                                   <td> <button type="button"
+                                    class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn"
+                                    data-toggle="tooltip" data-original-title="Delete"><a href="{% url 'category_view' book.id %}"><i class="ti-close"
+                                        aria-hidden="true"></i></a></button></td>
+                                    <td>
+                                       
+                                        <button type="button"
+                                            class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn"
+                                            data-toggle="tooltip" data-original-title="Delete"><a href="{% url 'category_edit' book.id %}"><i class="ti-close"
+                                                aria-hidden="true"></i></a></button>
+                                                <button type="button"
+                                                class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn"
+                                                data-toggle="tooltip" data-original-title="Delete"><a href="{% url 'category_delete' book.id %}"><i class="ti-trash"
+                                                    aria-hidden="true"></i></a></button>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                  </tbody>
+                            
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

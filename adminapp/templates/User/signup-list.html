@@ -1,0 +1,22 @@
+<table>
+<thead>
+    <th>user_name</th>
+    <th>email</th>
+    <th>mobile_number</th>
+    <th>status</th>
+    <th>Edit</th>
+    <th>Delete</th>
+</thead>
+<tbody>
+    {% for book in form %}
+  
+    <td>{{ book.user_name }}</td>
+    <td>{{ book.email }}</td>
+    <td>{{ book.mobile_number }}</td>
+    <td>{{ book.status }}</td>
+    <td><a href="{% url 'signup_edit' book.id %}">edit</a></td>
+    <td><a href="{% url 'signup_delete' book.id %}">delete</a></td>
+   
+    {% endfor %}
+</tbody>
+</table>

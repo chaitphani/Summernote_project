@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}                                          
+{% block content %}
+
+        <section class="inner-banner">
+            <div class="container">
+                <h2 class="inner-banner__title">Our <span>Team</span></h2><!-- /.inner-banner__title -->
+                <ul class="thm-breadcrumb">
+                    <li class="thm-breadcrumb__item"><a class="thm-breadcrumb__link" href="{% url 'index' %}">Home</a></li>
+                    <li class="thm-breadcrumb__item current"><a class="thm-breadcrumb__link" href="{% url 'our_team' %}">Our Team</a></li>
+                </ul><!-- /.thm-breadcrumb -->
+            </div><!-- /.container -->
+        </section>
+
+        <div class="team-block team-block-page mrb-100">
+            <div class="container">
+                {% for x in spec %}
+                    {% if x.ourteam_set.all %}
+                        <h3 class="title">{{x.speciality_name}}</h3>
+                        <div class="row">
+                                {% for y in x.ourteam_set.all %}
+                                    <div class="col-lg-3 col-md-4">
+                                        <div class="team-member-card" data-animate="hg-fadeInUp" data-duration="1.0s" data-offset="100">
+                                            <div class="member-thumb">
+                                                <img src="{{y.doctor_image.url}}" alt="Member Image">
+                                            </div>
+                                            <h3 class="member-name">{{y.doctor_name}}</h3>
+                                            <p class="member-designation">{{y.doctor_designation}}</p>
+                                            <button type="button" class="btn" style="color: #074a4c;
+                                            background: #75bf9a;">Book Appointment</button>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+{% endblock %}
